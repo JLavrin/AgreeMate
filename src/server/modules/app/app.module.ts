@@ -3,8 +3,8 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import * as process from 'process';
 
 import { AppController } from 'server/modules/app/app.controller';
-import { AppService } from 'server/modules/app/app.service';
 import { UsersModule } from 'server/modules/users/users.module';
+import { AgreementsModule } from 'server/modules/agreements/agreements.module'
 
 @Module({
   imports: [
@@ -13,9 +13,10 @@ import { UsersModule } from 'server/modules/users/users.module';
       exclude: ['/api* '],
       serveRoot: '',
     }),
-    UsersModule
+    UsersModule,
+    AgreementsModule
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [],
 })
 export class AppModule {}
