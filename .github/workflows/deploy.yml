@@ -13,7 +13,7 @@ jobs:
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: <your Heroku app name>
+          heroku_app_name: bus-box
       - name: Build and push Docker image
         uses: docker/build-push-action@v2.7.0
         with:
@@ -24,6 +24,6 @@ jobs:
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: <your Heroku app name>
-          heroku_email: <your Heroku email>
+          heroku_app_name: bus-box
+          heroku_email: julian.lavrin@icloud.com
           strategy: git
